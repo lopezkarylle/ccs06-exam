@@ -9,14 +9,17 @@
 </head>
 <body>
 <div class="container-sm">
+    <br>
+    <br>
+    <br>
     <h1>Enter your complete name</h1>
 
-    <form action="/enter-attempts" method="POST">
+    <form action="/enter-grades" method="POST">
     @csrf
     @for ($i = 1; $i <= 5; $i++)
     <div class="row">
         <label>Student {{ $i }} Name:</label>
-        <input type="text" name="name_{{ $i }}" class="form-control">
+        <input type="text" name="name_{{ $i }}" class="form-control" required>
 </div>
     @endfor
     <hr />

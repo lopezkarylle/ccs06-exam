@@ -15,5 +15,5 @@ use App\Http\Controllers\StudentsController;
 */
 
 Route::get('begin', [StudentsController::class, 'begin']);
-Route::post('enter-attempts', [StudentsController::class, 'enterAttempts']);
-Route::post('compute-power', [StudentsController::class, 'computeGrade']);
+Route::post('enter-grades', [StudentsController::class, 'enterAttempts']);
+Route::post('compute-grades', [StudentsController::class, 'computeGrade']);

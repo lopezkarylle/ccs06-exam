@@ -9,9 +9,12 @@
 </head>
 <body>
 <div class="container-sm">
+    <br>
+    <br>
+    <br>
     <h1>Students' Grade Input</h1>
 
-    <form action="/compute-power" method="POST">
+    <form action="/compute-grades" method="POST">
     <input type="hidden" name="student_1" value="{{ $student_1 }}">
     <input type="hidden" name="student_2" value="{{ $student_2 }}">
     <input type="hidden" name="student_3" value="{{ $student_3 }}">
@@ -20,63 +23,63 @@
     @csrf 
     <div class="row">
         <label>Student: <strong>{{ $student_1 }}</strong></label>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Midterm Average</label>
-            <input type="number" name="s1_attempt1" class="form-control">
+            <input type="number" name="s1_attempt1" class="form-control" required min ="0" max ="100">
         </div>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Final Average</label>
-            <input type="number" name="s1_attempt2" class="form-control">
+            <input type="number" name="s1_attempt2" class="form-control" required min ="0" max ="100">
         </div>
     </div>
     <div class="row">
         <label>Student: <strong>{{ $student_2 }}</strong></label>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Midterm Average</label>
-            <input type="number" name="s2_attempt1" class="form-control">
+            <input type="number" name="s2_attempt1" class="form-control" required min ="0" max ="100">
         </div>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Final Average</label>
-            <input type="number" name="s2_attempt2" class="form-control">
+            <input type="number" name="s2_attempt2" class="form-control" required min ="0" max ="100">
         </div>
     </div>
     <div class="row">
-        <label>Student: <strong>{{ $student_3 }}</strong></label>
-        <div class="col col-md-4">
+        <label>Student: <strong>{{ $student_3 }}</strong></label required>
+        <div class="col col-md-6">
             <label>Midterm Average</label>
-            <input type="number" name="s3_attempt1" class="form-control">
+            <input type="number" name="s3_attempt1" class="form-control" required min ="0" max ="100">
         </div>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Final Average</label>
-            <input type="number" name="s3_attempt2" class="form-control">
+            <input type="number" name="s3_attempt2" class="form-control" required min ="0" max ="100">
         </div>
     </div>
     <div class="row">
         <label>Student: <strong>{{ $student_4 }}</strong></label>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Midterm Average</label>
-            <input type="number" name="s4_attempt1" class="form-control">
+            <input type="number" name="s4_attempt1" class="form-control" required min ="0" max ="100">
         </div>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Final Average</label>
-            <input type="number" name="s4_attempt2" class="form-control">
+            <input type="number" name="s4_attempt2" class="form-control" required min ="0" max ="100">
         </div>
     </div>
     <div class="row">
         <label>Student: <strong>{{ $student_5 }}</strong></label>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Midterm Average</label>
-            <input type="number" name="s5_attempt1" class="form-control">
+            <input type="number" name="s5_attempt1" class="form-control" required min ="0" max ="100">
         </div>
-        <div class="col col-md-4">
+        <div class="col col-md-6">
             <label>Final Average</label>
-            <input type="number" name="s5_attempt2" class="form-control">
+            <input type="number" name="s5_attempt2" class="form-control" required min ="0" max ="100">
         </div>
     </div>
     <hr />
     <div class="row">
         <button class="btn- btn-primary btn-lg" type="submit">
-            Compute Average Inputted Grade
+            Compute Average Grade
     </button>
     </div>
     </form>
